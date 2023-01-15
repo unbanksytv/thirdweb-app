@@ -7,13 +7,10 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="http://thirdweb.com/">thirdweb</a>!
+          <a href="http://livethelife.tv/">LIVETHELIFETV</a>
         </h1>
-
         <p className={styles.description}>
-          Get started by configuring your desired network in{" "}
-          <code className={styles.code}>pages/_app.tsx</code>, then modify the{" "}
-          <code className={styles.code}>pages/index.tsx</code> file!
+        LTL Art Collective
         </p>
 
         <div className={styles.connect}>
@@ -21,29 +18,27 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.grid}>
-          <a href="https://portal.thirdweb.com/" className={styles.card}>
-            <h2>Portal &rarr;</h2>
+          <a href="https://livethelife.tv/about/" className={styles.card}>
+            <h2>LTL Art Collective &rarr;</h2>
             <p>
-              Guides, references and resources that will help you build with
-              thirdweb.
+            We love photography and photogrammetry. Bluntly and deeply. This very pole enables us to build and propel the future of meta, digital, and traditional media.
             </p>
           </a>
 
-          <a href="https://thirdweb.com/dashboard" className={styles.card}>
-            <h2>Dashboard &rarr;</h2>
+          <a href="https://livethelife.tv/fmp-faq/" className={styles.card}>
+            <h2>Founder Mint Pass &rarr;</h2>
             <p>
-              Deploy, configure and manage your smart contracts from the
-              dashboard.
+            LTL is an on-chain auction platform dedicated to exceptional photography. Discover and bid on exclusive drops, curated by Florence. The inaugural sale is a highly curated auction of 10 new NFT collections by celebrated photographers, created & minted specifically to launch LiveTheLifeTV.
             </p>
           </a>
 
           <a
-            href="https://portal.thirdweb.com/templates"
+            href="https://livethelife.tv/dda-collection/"
             className={styles.card}
           >
-            <h2>Templates &rarr;</h2>
+            <h2>Genesis Collection &rarr;</h2>
             <p>
-              Discover and clone template projects showcasing thirdweb features.
+            For over a decade, the award-winning photographer Dimitri Daniloff has been among the top 10 advertising photographers in the world. Around the Millenium, Dimitri Daniloff pioneered the switch from analog to digital. Some of the brands that bought his work are Absolut Vodka, Air France, Audi, Carlsberg, Land Rover, LG, Longchamp, Nike, and Sony Playstation.
             </p>
           </a>
         </div>
