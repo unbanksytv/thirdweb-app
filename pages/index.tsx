@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.css";
 import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
-  const contractAddress = '0xBB2F2415377ACF8F25cd920Aa7C62E75e106a171';
+  const contractAddress = '0x6Aba324f29e405cef5976AF16f5296E7F75f2A3c';
   const address = useAddress();
   const [quantity, setQuantity] = useState('1');
   const { contract } = useContract(contractAddress);
