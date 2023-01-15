@@ -27,12 +27,13 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-            Claim Your {' '}
+            ! {' '}
             <a href="https://livethelife.tv/">
               LTL Guest Pass
             </a>
+             !
           </h1>
-
+        <br ></br>
         <div>
         <label>
             Quantity:
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
               onChange={(e) => setQuantity(e.target.value)}
             />
           </label>
+          <br ></br>
         </div>
 
         <div style={{ marginTop: '10px' }}>
@@ -65,6 +67,8 @@ const Home: NextPage = () => {
               : ''}
           </Web3Button>
         </div>
+
+        <br ></br>
 
         <div className={styles.grid}>
           <a href="https://livethelife.tv/about/" className={styles.card}>
