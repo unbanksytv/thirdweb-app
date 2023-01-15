@@ -5,6 +5,7 @@ import {
   useContractRead,
   Web3Button,
 } from '@thirdweb-dev/react';
+import { utils } from 'ethers';
 import type { NextPage } from "next";
 import { useState } from 'react';
 import styles from "../styles/Home.module.css";
@@ -26,23 +27,14 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-            Welcome to{' '}
-            <a href="https://thirdweb.com/nach.eth/DynamicFreeMint/">
-              Dynamic Free Mint
+            Claim Your {' '}
+            <a href="https://livethelife.tv/">
+              LTL Guest Pass
             </a>
-            !
           </h1>
 
-        <p className={styles.description}>
-        LTL Art Collective
-        </p>
-
-        <div className={styles.connect}>
-          <ConnectWallet />
-        </div>
-
         <div>
-          <label>
+        <label>
             Quantity:
             <input
               type="number"
