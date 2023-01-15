@@ -1,7 +1,7 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import Footer from 'components/Footer'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
