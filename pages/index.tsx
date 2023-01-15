@@ -1,21 +1,77 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useAddress,
+  useContract,
+  useContractRead,
+  Web3Button,
+} from '@thirdweb-dev/react';
 import type { NextPage } from "next";
+import { useState } from 'react';
 import styles from "../styles/Home.module.css";
 import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
+  const contractAddress = '0xBB2F2415377ACF8F25cd920Aa7C62E75e106a171';
+  const address = useAddress();
+  const [quantity, setQuantity] = useState('1');
+  const { contract } = useContract(contractAddress);
+  const { data: price, isLoading } = useContractRead(
+    contract,
+    'priceForAddress',
+    address,
+    quantity,
+  );
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="http://livethelife.tv/">LIVETHELIFETV</a>
-        </h1>
+            Welcome to{' '}
+            <a href="https://thirdweb.com/nach.eth/DynamicFreeMint/">
+              Dynamic Free Mint
+            </a>
+            !
+          </h1>
+
         <p className={styles.description}>
         LTL Art Collective
         </p>
 
         <div className={styles.connect}>
           <ConnectWallet />
+        </div>
+
+        <div>
+          <label>
+            Quantity:
+            <input
+              type="number"
+              value={quantity}
+              min="1"
+              onChange={(e) => setQuantity(e.target.value)}
+            />
+          </label>
+        </div>
+
+        <div style={{ marginTop: '10px' }}>
+          <Web3Button
+            contractAddress={contractAddress}
+            action={(contract) => {
+              contract.call('claim', address, quantity, {
+                value: price,
+              });
+            }}
+            isDisabled={!quantity || parseInt(quantity) < 1 || isLoading}
+          >
+            Mint{' '}
+            {price
+              ? `(${
+                  price?.toString() === '0'
+                    ? 'Free'
+                    : `${utils.formatEther(price)} ETH`
+                })`
+              : ''}
+          </Web3Button>
         </div>
 
         <div className={styles.grid}>
